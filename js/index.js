@@ -54,6 +54,7 @@ function createCard() {
 
 // Reveal a form with an input box and a button
 // weird bug with the hidden input
+// get the value from the input and set the evenetListener
 function createForm(divId) {
     var form = document.createElement('form');
 
@@ -66,9 +67,17 @@ function createForm(divId) {
     hiddenInput.innerHTML = "This is a test";
     form.appendChild(hiddenInput);
 
+    var hiddenButton = document.createElement('button');
+    hiddenButton.type = "button";
+    hiddenButton.innerHTML = "Submit";
+    hiddenButton.id = "submit";
+    form.appendChild(hiddenButton);
+
     divId.innerHTML = form.innerHTML;
 
-
+    document.getElementById("submit").addEventListener("click", function() {
+        console.log("This is working");
+    });
 }
 
 function hiddenForm(divId) {
@@ -95,7 +104,7 @@ function deleteListener() {
     });
 }
 
-// onclick listener for create button
+// onclick listener for creating card
 document.getElementById("create_new_card").addEventListener("click", function() {
     createCard();
     deleteListener();
@@ -104,25 +113,9 @@ document.getElementById("create_new_card").addEventListener("click", function() 
     a++;
 });
 
-// Event listener for the 3 divs (Task 2)
-// Can this be condensed????
-    document.getElementById("hidden_form_0").addEventListener("click", function() {
-    var hidden_form_0 = document.getElementById("hidden_form_0");
-    hiddenForm(hidden_form_0);
 
-});
 
-    document.getElementById("hidden_form_1").addEventListener("click", function() {
-    var hidden_form_1 = document.getElementById("hidden_form_1");
-    hiddenForm(hidden_form_1);
 
-});
-
-    document.getElementById("hidden_form_2").addEventListener("click", function() {
-    var hidden_form_2 = document.getElementById("hidden_form_2");
-    hiddenForm(hidden_form_2);
-
-});
 
 
 
