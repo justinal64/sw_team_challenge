@@ -52,6 +52,40 @@ function createCard() {
 
 }
 
+// Reveal a form with an input box and a button
+// weird bug with the hidden input
+// get the value from the input and set the evenetListener
+function createForm(divId) {
+    var form = document.createElement('form');
+
+    var header = document.createElement('h2');
+    header.innerHTML = "This is a test";
+    form.appendChild(header);
+
+    var hiddenInput = document.createElement('input');
+    hiddenInput.type = "textarea";
+    hiddenInput.innerHTML = "This is a test";
+    form.appendChild(hiddenInput);
+
+    var hiddenButton = document.createElement('button');
+    hiddenButton.type = "button";
+    hiddenButton.innerHTML = "Submit";
+    hiddenButton.id = "submit";
+    form.appendChild(hiddenButton);
+
+    divId.innerHTML = form.innerHTML;
+
+    document.getElementById("submit").addEventListener("click", function() {
+        console.log("This is working");
+    });
+}
+
+function hiddenForm(divId) {
+    divId.style.border = "5px solid black";
+    createForm(divId);
+
+}
+
 function cardBackground() {
     document.getElementById("card_color_" + a).addEventListener("input", function() {
         this.parentNode.style.background = this.value;
@@ -70,7 +104,7 @@ function deleteListener() {
     });
 }
 
-// onclick listener for create button
+// onclick listener for creating card
 document.getElementById("create_new_card").addEventListener("click", function() {
     createCard();
     deleteListener();
@@ -80,17 +114,6 @@ document.getElementById("create_new_card").addEventListener("click", function() 
 });
 
 
-// When a user selects a color background_color of the card changes to that color
-
-// When a user selects a color form the 2nd input the font color changes
-// When a user clicks the delete button the card in question is deleted and no other
-
-
-/*Above the text on each card, there must be two input controls of type color.
-Above the text on each card, there must be a button element labeled Delete.
-When the user selects a color from the first input, then the background color of that card, and no other cards, should change to the color chosen.
-When the user selects a color from the second input, then the font color of that card, and no other cards, should change to the color chosen.
-When the user clicks the Delete button, the containing card, and no other cards, should then be removed from the DOM. Not just made invisible, actually removed from the DOM.*/
 
 
 

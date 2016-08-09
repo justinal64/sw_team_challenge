@@ -1,3 +1,15 @@
 body {
     /*background-color: pink;*/
 }
+
+#hidden_form_0 {
+    background-color: red;
+}
+
+#hidden_form_1 {
+    background-color: blue;
+}
+
+#hidden_form_2 {
+    background-color: aqua;
+}
