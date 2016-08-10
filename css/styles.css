@@ -1,3 +1,4 @@
+/*Task 2*/
 #hidden_form_0 {
     background-color: red;
 }
@@ -10,6 +11,7 @@
     background-color: aqua;
 }
 
+/*Task 3*/
 #basic {
     width: 100px;
     height: 100px;
@@ -20,4 +22,46 @@
     width: 200px;
     height: 200px;
     background-color: blue;
+}
+
+/*Task 4*/
+.ticWH {
+    height: 200px;
+    width: 30%;
+    background-color: grey;
+    display: inline-block;
+}
+
+.tacWH {
+    height: 200px;
+    width: 30%;
+    background-color: blue;
+    display: inline-block;
+}
+
+.content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.inputStyling {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 10em;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;
+    height: 200px;
+    margin-bottom: 4px;
+    background: #f90;
+    color: #fff;
+}
+
+.stylingO {
+    background: #f90;
+    color: #fff;
+}
+
+.stylingX {
+    background: #f90;
+    color: blue;
 }
