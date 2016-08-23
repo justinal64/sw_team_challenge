@@ -88,7 +88,7 @@ function resetGame(winner) {
 
     var betterGameButton = document.createElement('Button');
     betterGameButton.type = "Button";
-    betterGameButton.innerHTML = "Click Me I'm way better than tic-tac-toe game";
+    betterGameButton.innerHTML = "Click Me I'm way better than tic-tac-toe";
     betterGameButton.id = "better_game";
     gameReset.appendChild(betterGameButton);
     betterGameButton.addEventListener("click", function() {
